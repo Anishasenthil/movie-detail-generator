@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="main.css"> 
+    <title>Movie DB🎥</title>
+</head>
+<body>
+
+
+    <form action="/" method="post">
+        <h1><span1>Fetch  details  of  the  Movie 🎬🎥🎞</span1></h1>
+         <label for="movieinput"><span1>Enter the movie name :</span1></label>
+         <input id="movieinput" type="text" name="moviename">
+         <br><br>
+         <button type="submit" ><span>Search</span></button>
+    </form>
+    <br><br><br><br>
+    
+    
+                    <%  if(locals.data){ %>
+
+                        <div class="row">
+                            <div class="column">
+                              <div class="card"><span>Movie name :</span><br><br> <%= data.Title %></div>
+                            </div>
+                            <div class="column">
+                              <div class="card"><span>Year released :</span> <br><br><%= data.Year %></div>
+                            </div>
+                            <div class="column">
+                              <div class="card"><span>runtime in theatre :</span><br><br> <%= data.Runtime %></div>
+                            </div>
+                            <div class="column">
+                              <div class="card"><span>Genre : </span><br><br><%= data.Genre %></div>
+                            </div>
+                          </div>
+                          <br><br><br><br>
+                          <div class="row">
+                            <div class="column">
+                              <div class="card"><span>Director : </span><br><br> <%= data.Director %></div>
+                            </div>
+                            <div class="column">
+                              <div class="card"><span>Actors :</span> <br><br><%= data.Actors  %></div>
+                            </div>
+                            <div class="column">
+                              <div class="card"><span>Awards :</span><br><br> <%= data.Awards  %></div>
+                            </div>
+                            <div class="column">
+                              <div class="card"><span>Movie released in the Languages :</span><br><br><%=  data.Language %></div>
+                            </div>
+                          </div>
+                          <br><br><br><br>
+                          <div class="row">
+                            <div class="column1">
+                              <div class="card"><span>Movie Rating :</span><br><br> <%= data.imdbRating  %> /10</div>
+                            </div>
+                            <div class="column1">
+                                <div class="card"><span>Description of the movie :</span><br><br> <%= data.Plot %></div>
+                              </div>
+                            <div class="column1">
+                              <div class="card"><span>Boxoffice collection :</span><br><br><%=  data. BoxOffice  %></div>
+                            </div>
+                          </div>
+                          <div class="poster">
+                            <div class="column">
+                              <span>First poster: </span></h3><img src = <%= data.Poster %> >
+                            </div>
+                          </div>
+                         <footer>made with 🔥 @ ASK</footer>
+                       <% } else {%>
+                        <%=error.msg%>
+                  
+                      <%   }   %>
+          
+ 
+    
+
+</body>
+</html>

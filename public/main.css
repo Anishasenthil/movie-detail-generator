@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("fire.jpg");
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  column1 {
+    flex: 1; /* Each child takes an equal amount of available space */
+    margin: 10px; /* Adjust the margin as per your preference */
+    padding: 10px; /* Adjust the padding as per your preference */
+    border: 1px solid #ccc; /* Optional border for card styling */
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  .row {
+    display: flex;
+    justify-content: space-between; /* Distribute space between children */
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .poster {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Optionally, to center vertically within the viewport */
+    margin-top: 0%;
+  }
+ 
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 26px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    background-image: url("fire.jpg");
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    outline-style: dotted;
+    outline-color: crimson;
+  }
+  .card:hover{
+    background-color: rgb(246, 132, 101);
+  }
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  .card:hover { transform: translate3D(0,-1px,0) scale(1.10); }
+  .poster:hover{transform: translate3D(0,-1px,0) scale(1.03);}
+
+  span{
+    color:crimson;
+    font-size: 30px;
+    font-family:"Papyrus";
+    font-weight: bold;
+  }
+
+  form {
+    background-image: url("fire.jpg");
+    color:#fff;
+    border-radius: 25px;
+    padding: 20px;
+    background-repeat: repeat;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+  background-color: #ffffff;
+  padding: 10px ;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: rgb(214, 143, 101);
+  color:#fff;
+}
+#movieinput{
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: #000000;
+}
+span1
+{
+  color: #fff;
+  font-size: 40px;
+    font-family:"Papyrus";
+    font-weight: bold;
+}
+footer
+{
+  color: #fff;
+  text-align: center;
+  font-size: larger;
+  font-family:"Papyrus";
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+}
